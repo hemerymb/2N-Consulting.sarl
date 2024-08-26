@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.logo img {
+    height: 90px; /* Ajustez la taille du logo */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+   
+}
+
+.nav-links a:hover {
+    background-color: #b2c7ff; /* Couleur de fond au survol */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #b2c7ff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 300px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #666;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #80a5e2; /* Couleur au survol */
+}
+
+.search-bar img {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-section {
+    background-image: url('../assets/images/rectangle_3.png'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+   
+}
+
+.content {
+    background-color: rgba(24, 86, 229, 0.612); /* Couleur de l'arrière-plan avec transparence */
+    padding: 80px;
+    display: inline-block;
+}
+
+.welcome-text {
+    font-size: 24px;
+    margin: 0;
+}
+
+.company-name {
+    color: #e38a15; /* Couleur personnalisée pour le nom de l'entreprise */
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.company-name1 {
+    color: #e38a15; /* Couleur personnalisée pour le nom de l'entreprise */
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.main-heading {
+    font-size: 36px;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.main-heading1 {
+    font-size: 36px;
+    margin: 40px 0;
+    line-height: 1.3;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-start;
+    height: 100px;
+}
+
+.sub-text {
+    font-size: 15px;
+    margin: 10px 0;
+    font-style: oblique;
+}
+
+
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.section-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card-icon {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #777;
+}
+
+.learn-more-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b5c7ff;
+    color: #333;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #829cff;
+    color: white;
+}
+
+.container {
+    background-image: url('../assets/images/financier.webp'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 0% 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.left-section {
+    flex: 1;
+    text-align: left;
+    margin-right: auto;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-block-end: auto;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+.right-section {
+    flex: 2;
+    margin-top: auto;
+    padding-left: auto;
+    margin-left: auto;
+    text-align: right;
+}
+
+.right-section h1 {
+    color: #ffffff;
+    margin-left: auto;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.services-list li {
+    margin-bottom: 5px;
+    align-items: baseline;
+    content: '';   
+}
+
+.description {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+}
+
+.company-name {
+    color: #ff6600;
+    font-weight: bold;
+    margin-right: auto;
+}
