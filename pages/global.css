@@ -1,6 +1,13 @@
+:root {
+    --body-bg-color: #e9fbffe0; 
+}
+
 body {
+    padding: auto;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--body-bg-color);
+    
 }
 
 .navbar {
@@ -8,17 +15,38 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: var(--body-bg-color);
+    z-index: 700;
+}
+
+.dropdown-content {
+    display: none; /* Masquer le contenu par défaut */
+    position: absolute; /* Positionner le contenu */
+    background-color: white; /* Couleur de fond du menu déroulant */
+    min-width: 160px; /* Largeur minimale */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Ombre */
+    z-index: 1; /* Assurez-vous qu'il est au-dessus */
+}
+
+.dropdown-content a {
+    color: black; /* Couleur du texte des liens */
+    padding: 12px 16px; /* Espacement */
+    text-decoration: none; /* Pas de soulignement */
+    display: block; /* Chaque lien occupe une ligne entière */
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(87, 87, 87, 0.7); /* Couleur de fond au survol */
 }
 
 .logo img {
-    height: 90px; /* Ajustez la taille du logo */
+    height: 90px; 
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px; /* Espacement entre les liens */
+    gap: 20px; 
 }
 
 .nav-links li {
@@ -34,8 +62,8 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: #b2c7ff; /* Couleur de fond au survol */
-    border-radius: 10px; /* Coins arrondis */
+    background-color: #b2c7ff; 
+    border-radius: 10px; 
 }
 
 .search-bar {
@@ -80,6 +108,7 @@ body {
     color: white;
     padding: 80px 20px;
     text-align: center;
+    padding-top: 100px;
    
 }
 
@@ -95,13 +124,13 @@ body {
 }
 
 .company-name {
-    color: #e38a15; /* Couleur personnalisée pour le nom de l'entreprise */
+    color: #FFC300; /* Couleur personnalisée pour le nom de l'entreprise */
     font-style: oblique;
     font-weight: bold;
 }
 
 .company-name1 {
-    color: #e38a15; /* Couleur personnalisée pour le nom de l'entreprise */
+    color: #FFC300; /* Couleur personnalisée pour le nom de l'entreprise */
     font-style: oblique;
     font-weight: bold;
 }
@@ -133,6 +162,7 @@ body {
     padding: 40px 20px;
     text-align: center;
     margin-top: 100px;
+    padding-top: 60px;
 }
 
 .section-title {
@@ -194,70 +224,116 @@ body {
     color: white;
 }
 
-.container {
-    background-image: url('../assets/images/financier.webp'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
+.about-section {
+    background: url('../assets/images/financier.webp') no-repeat center center/cover, #6e92e4;
+    background-color: #809de2;
+    padding: 20px;
+    border-radius: 10px;
     color: white;
-    padding: 0% 20px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.left-section {
+    margin-top: 100px;
+    padding-top: 60px;
+    
+  }
+  
+  .about-container {
+    background-color: rgba(24, 86, 229, 0.612);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .left-section {
     flex: 1;
-    text-align: left;
-    margin-right: auto;
-}
-
-.profile-picture {
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    margin-block-end: auto;
-}
-
-.name {
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: auto;
-}
-
-.right-section {
-    flex: 2;
-    margin-top: auto;
-    padding-left: auto;
-    margin-left: auto;
-    text-align: right;
-}
-
-.right-section h1 {
-    color: #ffffff;
-    margin-left: auto;
-}
-
-.services-list {
-    list-style-type: none;
-    padding: 0;
-    color: #ffffff;
-    margin-right: auto;
-}
-
-.services-list li {
-    margin-bottom: 5px;
-    align-items: baseline;
-    content: '';   
-}
-
-.description {
-    margin-top: 20px;
-    line-height: 1.6;
-    color: #ffffff;
     text-align: center;
-}
-
-.company-name {
-    color: #ff6600;
+    padding: 20px;
+  }
+  
+  .right-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-end;
+  }
+  
+  .profile-picture {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .name {
     font-weight: bold;
-    margin-right: auto;
-}
+    font-size: 18px;
+    color: white;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .services-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+  }
+  
+  .services-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px; 
+    color: white;
+  }
+
+  .services-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px; 
+    width: 10px;
+    height: 10px;
+    background-color: #1d1c28; 
+    border-radius: 3px; /
+  }
+
+  .services-list1 {
+    list-style-type: none; 
+    margin-bottom: 20px;
+    padding-left: 0;
+    color: rgb(255, 255, 255);
+    text-align: right;
+  }
+  
+  .services-list1 li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-right: 20px; 
+    color: white;
+  }
+  
+  .services-list1 li::after {
+    content: '';
+    position: absolute;
+    right: 0; 
+    top: 5px; 
+    width: 10px;
+    height: 10px;
+    background-color: #1d1c28; 
+    border-radius: 3px; 
+  }
+  
+  .description {
+    color: white;
+    font-size: 16px;
+  }
+  
+  .company-name2 {
+    font-weight: bold;
+    color: #FFC300; 
+    font-style: oblique;
+  }
+  
