@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "title": "Accueil",
+        "url": "home.html",
+        "content": "Bienvenue chez 2N Consulting.sarl, NOUS OFFRONS DES SERVICES D'ASSISTANCE TECHNIQUE DANS LES DOMAINES DES FINANCES PUBLIQUES ET DE LA PROSPECTIVE ÉCONOMIQUE.Notre équipe d'experts est dédiée à accompagner les institutions publiques et privées dans l'optimisation de leurs finances et l'élaboration de stratégies économiques durables.."
+    },
+    {
+        "id": 2,
+        "title": "Contexte Général",
+        "url": "contexte.html",
+        "content": "Depuis 2001, la pratique de la décentralisation n’a cessé d’évoluer au Cameroun. La loi n°96/06 du 18 janvier 1996, portant révision de la constitution du 02 juin 1972, a donné une impulsion novatrice et un rôle plus accru et plus déterminant à la décentralisation, renforcée par la loi n°2019/024 du 24 décembre 2019 portant Code Général des Collectivités Territoriales Décentralisées (CGCTD).."
+    },
+    {
+        "id": 3,
+        "title": "Enjeux et Défis",
+        "url": "enjeux.html",
+        "content": "ENJEUX ET DEFIS DES THEMATIQUES PROPOSEES"
+    },
+    {
+        "id": 4,
+        "title": "Contactez-nous",
+        "url": "home.html#footer-container",
+        "content": "IDENTIFICATION: Raison Sociale : 2N CONSULTING Sarl, Boite Postale : 2282 Yaoundé, Portable : 677 37 91 01 / 698 64 27 18, E-Mail : ngwenn@yahoo.fr, Mail : nnconsultingsarl@yahoo.com."
+    },
+    {
+        "id": 5,
+        "title": "Accueil/Nos métiers",
+        "url": "home.html#presentation",
+        "content": "Nos métiers: Nous mettons notre expertise à votre service pour vous accompagner dans les domaines clés de vos projets. Voici nos principaux métiers, Conseil, Évaluation des Programmes et Projets, Études Socioéconomiques, Audits des Programmes et Projets, Planification Stratégique et Locale, Formation"
+    },
+    {
+        "id": 6,
+        "title": "Accueil/Qui sommes-nous",
+        "url": "home.html#about-section",
+        "content": "2N CONSULTING Sarl est un cabinet d'études basé à Yaoundé, au Cameroun. Créé le 28 février 2022, il est dirigé par le Professeur NGWEN NGANGUE, Maître de Conférences à l'Université de Yaoundé II. Ce cabinet est né de la volonté et du désir de son promoteur d'accompagner le développement socioéconomique du Cameroun en proposant à ses clients une expertise de haut niveau et à forte valeur ajoutée, Professeur NGWEN NGANGUE."
+    },
+    {
+        "id": 7,
+        "title": "Accueil/Équipe du cabinet",
+        "url": "home.html#container1",
+        "content": "Multidisciplinaire, notre équipe est composée d’économistes, d’experts financiers, de statisticiens économistes, d’experts en finances publiques et de planificateurs."
+    },
+    {
+        "id": 8,
+        "title": "Accueil/Caractéristiques des services de 2N Consulting.sarl",
+        "url": "home.html#container2",
+        "content": "NOS ATOUTS, NOS VALEURS, NOTRE VOLONTÉ, NOS CONTRAINTES"
+    },
+    {
+        "id": 9,
+        "title": "Enjeux et Défis/DES OUTILS DE PLANIFICATION STRATEGIQUE",
+        "url": "enjeux.html#strategie",
+        "content": "L’élaboration d’un Plan Stratégique de Développement et d’un Cadre Stratégique de Performance est un exercice qui consiste à projeter dans l’avenir des évolutions plausibles du développement socioéconomique d’une organisation/Structure à un horizon donné et élaborer un cadre d’action global."
+    },
+    {
+        "id": 10,
+        "title": "Enjeux et Défis/ DES OUTILS DE PROGRAMMATION BUDGETAIRE (CBMT, CDMT)",
+        "url": "enjeux.html#budget",
+        "content": "L’élaboration des outils de cadrage budgétaire et de programmation des dépenses à moyen terme est devenue incontournable dans le contexte du passage au budget de moyens au budget par programme. L’arrimage des Organisations/Structures au budget programme est en soi un changement très important dans l’environnement desdites Organisations, CBMT et CDMT, Le Cadre de Dépenses à Moyen Terme (CDMT)"
+    },
+    {
+        "id": 11,
+        "title": "Enjeux et Défis/DU PILOTAGE EFFICACE DU BUDGET PROGRAMME",
+        "url": "enjeux.html#pilotage",
+        "content": "La démarche de la budgétisation par programme axée sur la performance repose sur une logique qui veut qu’à partir des orientations politiques, des attentes des citoyens (usagers, contribuables), des marges de manœuvre internes et des ressources mobilisables, chaque organisation/structure fixe les objectifs stratégiques et les objectifs des programmes. Ces objectifs sont décrits dans le Projet de Performance Annuel (PPA) qui constitue le document de base de pilotage stratégique et opérationnel."
+    },
+    {
+        "id": 12,
+        "title": "Enjeux et Défis/DE L'EXÉCUTION DES OPÉRATIONS BUDGETAIRES ET REPORTING FINANCIER",
+        "url": "enjeux.html#executer",
+        "content": "Le compte administratif Annuel, Les modifications budgétaires,Le reporting financier,La comptabilité budgétaire"
+    },
+    {
+        "id": 13,
+        "title": "Enjeux et Défis/DU PROFIL ÉCONOMIQUE DES TERRITOIRES",
+        "url": "enjeux.html#economie",
+        "content": "Dans un contexte de développement par les territoires, où la coopération décentralisée est un levier certain, les profils économiques construits devront clairement suggérer des regroupements productifs entre les territoires, pour faciliter ou mieux organiser l'activité économique locale. Ces profils économiques définis pourraient également attirer des investisseurs qui trouveraient leur compte dans la structure économique en place."
+    }
+]

@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2N Consulting.sarl</title>
     <link rel="stylesheet" href="global.css" />
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
 
+</head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
             <img src="../assets/images/logo_initiales_floral_beige_jaune.png" />
         </div>
-      <ul class="nav-links">
-        <li><a href="#welcome-text">Accueil</a></li>
-        <li class="dropdown">
-            <a  class="dropbtn" id="presentationBtn">Présentation</a>
-            <div class="dropdown-content" id="dropdownContent">
-                <a href="#presentation">Nos métiers</a>
-                <a href="#about-section">Qui sommes-nous ?</a>
-                <a href="#container1">Equipe du cabinet</a>
-                <a href="#container2">Caractéristiques des services</a>
-            </div>
-        </li>
-        <li><a href="#contexte">Contexte Général</a></li>
-        <li><a href="#enjeux">Enjeux et Défis</a></li>
-        <li><a href="#footer-container">Contactez-nous</a></li>
-      </ul>
-      <div class="search-bar">
-        <input type="text" placeholder="Rechercher...">
-        <button type="submit"><img src="../assets/images/search_strong_icon_1.png" alt="Search"></button>
-      </div>
+        <ul class="nav-links">
+            <li><a href="#welcome-text">Accueil</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" id="presentationBtn">Présentation</a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#presentation">Nos métiers</a>
+                    <a href="#about-section">Qui sommes-nous ?</a>
+                    <a href="#container1">Equipe du cabinet</a>
+                    <a href="#container2">Caractéristiques des services</a>
+                </div>
+            </li>
+            <li><a href="contexte.html" class="context">Contexte Général</a></li>
+            <li><a href="enjeux.html" class="enjeux">Enjeux et Défis</a></li>
+            <li><a href="#footer-container">Contactez-nous</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher...">
+            <button type="submit" id="searchButton"><img src="../assets/images/search_strong_icon_1.png" alt="Search"></button>
+        </div>
+
+        <script>
+            document.getElementById('searchButton').addEventListener('click', function() {
+                const query = document.getElementById('searchInput').value;
+                if(query) {
+                    // Redirige vers la page des résultats avec la requête de recherche dans l'URL
+                    window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
+                }
+            });
+        </script>
     </nav>
+    
 
     <div class="hero-section" id="welcome-text">
         <div class="content">
@@ -43,37 +55,76 @@
     </div>
 
     <section class="services1" id="presentation">
-        <h2 class="section-title" >Nos métiers</h2>
+        <h2 class="section-title" style="color: #000000;">Nos métiers </h2>
         <p class="section-subtitle">Nous mettons notre expertise à votre service pour vous accompagner dans les domaines clés de vos projets. Voici nos principaux métiers</p>
         
-        <div class="cards">
-            <div class="card">
-                <img src="../assets/images/ff.jpeg" alt="Finances Publiques" class="card-icon">
-                <p class="card-title">Finances Publiques</p>
+        <div class="carousel">
+            <button class="arrow left" onclick="moveLeft()">&#10094;</button>
+            <div class="cards">
+                <div class="card">
+                    <img src="../assets/images/ff.jpeg" alt="Finances Publiques" class="card-icon">
+                    <p class="card-title">Finances Publiques</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/socio.png" alt="Études Socioéconomiques" class="card-icon">
+                    <p class="card-title">Études Socioéconomiques</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/cons.png" alt="Conseil" class="card-icon">
+                    <p class="card-title">Conseil</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/evaluation.jpeg" alt="Évaluation des Programmes et Projets" class="card-icon">
+                    <p class="card-title">Évaluation des Programmes et Projets</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/pg.png" alt="Audits des Programmes et Projets" class="card-icon">
+                    <p class="card-title">Audits des Programmes et Projets</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/stat.png" alt="Planification Stratégique et Locale" class="card-icon">
+                    <p class="card-title">Planification Stratégique et Locale</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/formation.jpg" alt="Planification Stratégique et Locale" class="card-icon">
+                    <p class="card-title">Formation</p>
+                </div>
+                <!-- Duplication des cartes pour l'effet de boucle infinie -->
+                <div class="card">
+                    <img src="../assets/images/ff.jpeg" alt="Finances Publiques" class="card-icon">
+                    <p class="card-title">Finances Publiques</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/socio.png" alt="Études Socioéconomiques" class="card-icon">
+                    <p class="card-title">Études Socioéconomiques</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/cons.png" alt="Conseil" class="card-icon">
+                    <p class="card-title">Conseil</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/evaluation.jpeg" alt="Évaluation des Programmes et Projets" class="card-icon">
+                    <p class="card-title">Évaluation des Programmes et Projets</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/pg.png" alt="Audits des Programmes et Projets" class="card-icon">
+                    <p class="card-title">Audits des Programmes et Projets</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/stat.png" alt="Planification Stratégique et Locale" class="card-icon">
+                    <p class="card-title">Planification Stratégique et Locale</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/formation.jpg" alt="Planification Stratégique et Locale" class="card-icon">
+                    <p class="card-title">Formation</p>
+                </div>
             </div>
-            <div class="card">
-                <img src="../assets/images/socio.png" alt="Études Socioéconomiques" class="card-icon">
-                <p class="card-title">Études Socioéconomiques</p>
-            </div>
-            <div class="card">
-                <img src="../assets/images/cons.png" alt="Conseil" class="card-icon">
-                <p class="card-title">Conseil</p>
-            </div>
-            <div class="card">
-                <img src="../assets/images/evaluation.jpeg" alt="Évaluation des Programmes et Projets" class="card-icon">
-                <p class="card-title">Évaluation des Programmes et Projets</p>
-            </div>
-            <div class="card">
-                <img src="../assets/images/pg.png" alt="Audits des Programmes et Projets" class="card-icon">
-                <p class="card-title">Audits des Programmes et Projets</p>
-            </div>
-            <div class="card">
-                <img src="../assets/images/stat.png" alt="Planification Stratégique et Locale" class="card-icon">
-                <p class="card-title">Planification Stratégique et Locale</p>
-            </div>
+            <button class="arrow right" onclick="moveRight()">&#10095;</button>
         </div>
+        
+        
 
-        <a href="#" class="learn-more-button">En savoir plus</a>
+        <a href="savoir.html" class="learn-more-button">En savoir plus</a>
     </section>
 
     <div class="about-section" id="about-section">
@@ -83,18 +134,18 @@
             <p class="name">Professeur NGWEN NGANGUE</p>
           </div>
           <div class="right-section">
-            <h1>👤 Qui sommes-nous ?</h1>
+            <h1 style="font-size: 45px;">👤 Qui sommes-nous ?</h1>
             <ul class="services-list">
-              <li>Planification stratégique et locale</li>
-              <li>Formation</li>
-              <li>Comptabilité budgétaire</li>
+              <li style="font-size: 20px;">Planification stratégique et locale</li>
+              <li style="font-size: 20px;">Formation</li>
+              <li style="font-size: 20px;">Comptabilité budgétaire</li>
             </ul>
             <ul class="services-list1">
-              <li>Finances Publiques</li>
-              <li>Études socioéconomiques</li>
-              <li>Audit / Évaluation des programmes et projets de développement</li>
+              <li style="font-size: 20px;">Finances Publiques</li>
+              <li style="font-size: 20px;">Études socioéconomiques</li>
+              <li style="font-size: 20px;">Audit / Évaluation des programmes et projets de développement</li>
             </ul>
-            <p class="description">
+            <p class="description" style="font-size: 20px;">
               <span class="company-name2">2N CONSULTING Sarl</span> est un cabinet d'études basé à Yaoundé, au Cameroun. Créé le 28 février 2022, il est dirigé par le Professeur NGWEN NGANGUE, Maître de Conférences à l'Université de Yaoundé II. Ce cabinet est né de la volonté et du désir de son promoteur d'accompagner le développement socioéconomique du Cameroun en proposant à ses clients une expertise de haut niveau et à forte valeur ajoutée.
             </p>
           </div>
@@ -111,15 +162,15 @@
                 <p>Chaque membre de l’équipe contribue de par son engagement et son professionnalisme au respect des délais des prestations, de la commande à la livraison.</p>
             </div>
             <div class="image-section">
-                <img src="../assets/images/cabinet.jpeg" alt="Équipe du cabinet" >
+                <img src="../assets/images/eqp.jfif" alt="Équipe du cabinet" >
             </div>
         </div>
     </div>
     <div class="container2" id="container2">
         <h1>💼 Caractéristiques des services <br>de <span>2N Consulting.sarl</span></h1>
         <div class="services">
-            <div class="service">
-                <h2>a. NOS ATOUTS</h2>
+            <div class="service" style="max-width: 95%;">
+                <h2 style="color: #000000;">a. NOS ATOUTS</h2>
                 <ul>
                     <li>Grande capacité d'adaptation sur le terrain pour comprendre les situations complexes et proposer des solutions adaptées.</li>
                     <li>Consultants de haut niveau avec une solide expérience.</li>
@@ -127,24 +178,24 @@
                     <li>Engagement envers l'excellence : nous aspirons à être des leaders dans la qualité technique et le service.</li>
                 </ul>
             </div>
-            <div class="service">
-                <h2>b. NOS VALEURS</h2>
+            <div class="service" style="margin-top: 20px; max-width: 95%;">
+                <h2 style="color: #000000;">b. NOS VALEURS</h2>
                 <ul>
                     <li>Intégrité et confidentialité, respect de la diversité.</li>
                     <li>Professionnalisme.</li>
                     <li>Transfert de savoir-faire à nos clients.</li>
                 </ul>
             </div>
-            <div class="service">
-                <h2>c. NOTRE VOLONTÉ</h2>
+            <div class="service" style="margin-top: 20px; max-width: 95%;">
+                <h2 style="color: #000000;">c. NOTRE VOLONTÉ</h2>
                 <ul>
                     <li>Optimiser la gestion de vos activités en réduisant les risques d'objectifs non atteints.</li>
                     <li>Accroître votre efficacité.</li>
                     <li>Relever les défis actuels et futurs en créant un environnement performant pour votre organisation.</li>
                 </ul>
             </div>
-            <div class="service">
-                <h2>d. NOS CONTRAINTES</h2>
+            <div class="service" style="margin-top: 20px; max-width: 95%;">
+                <h2 style="color: #000000;">d. NOS CONTRAINTES</h2>
                 <ul>
                     <li>Objectifs à atteindre.</li>
                     <li>Maîtrise du potentiel de votre structure.</li>
@@ -155,22 +206,21 @@
         </div>
     </div>
     <div class="container4"   width="100%" height="500px"> </div>
+    
     <footer>
         <div class="footer-container" id="footer-container">
             <div class="footer-section">
+                <div class="logo">
+                    <img src="../assets/images/logo_initiales_floral_beige_jaune.png" />
+                </div>
                 <h2>IDENTIFICATION:</h2>
                 <p><img src="../assets/images/rt.png" alt="Logo"  width="30px" height="30px" class="icon"> Raison Sociale : 2N CONSULTING Sarl</p>
                 <p><img src="../assets/images/postal.jpeg" alt="Icon" class="icon"  width="30px" height="30px"> Boite Postale : 2282 Yaoundé</p>
             </div>
-            <div class="footer-section">
+            <div class="footer-section1">
                 <p><img src="../assets/images/tel.jpeg" alt="Phone Icon" width="30px" height="30px" class="icon"> Portable : 677 37 91 01 / 698 64 27 18</p>
                 <p><img src="../assets/images/email.png" alt="Mail Icon" width="30px" height="30px" class="icon"> E-Mail : ngwenn@yahoo.fr</p>
                 <p><img src="../assets/images/email.png" alt="Mail Icon" width="30px" height="30px" class="icon"> Mail : nnconsultingsarl@yahoo.com</p>
-            </div>
-            <div class="footer-social">
-                <a href="#"><img src="../assets/images/linkedin_icon_1.png" alt="LinkedIn" width="30px" height="30px"  class="social-icon"></a>
-                <a href="#"><img src="../assets/images/whatsapp_icon_1.png" alt="WhatsApp" width="30px" height="30px" class="social-icon"></a>
-                <a href="#"><img src="../assets/images/fb_facebook_facebook_logo_icon_1.png" alt="Other" width="30px" height="30px" class="social-icon"></a>
             </div>
         </div>
     </footer>
