@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Résultats de la recherche</title><style>body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .result-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .no-results {
+            color: red;
+            font-style: oblique;
+        }</style></head><body><h1>Résultats de la recherche</h1><div id="results"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script><script>// Fonction pour récupérer les paramètres de l'URL
+        function getQueryParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Initialiser Elasticlunr
+        const index = elasticlunr(function () {
+            this.addField('title');
+            this.addField('content');
+            this.setRef('id');
+        });
+
+        // Fonction pour afficher les résultats
+        function displayResults(pagesData, query) {
+            const resultsContainer = document.getElementById('results');
+
+            // Ajouter chaque page à l'index
+            pagesData.forEach(function(page) {
+                index.addDoc(page);
+            });
+
+            // Exécuter la recherche
+            const results = index.search(query, {
+                expand: true
+            });
+
+            // Afficher les résultats
+            if (results.length > 0) {
+                results.forEach(function(result) {
+                    const page = pagesData.find(page => page.id === parseInt(result.ref));
+
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('result-item');
+
+                    const snippet = page.content.substring(0, 150); // Extraire un extrait du contenu
+
+                    resultItem.innerHTML = `
+                        <h2>${page.title}</h2>
+                        <p>${snippet}...</p>
+                        <a href="${page.url}">Voir plus</a>
+                    `;
+
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML = '<p class="no-results">Aucun résultat trouvé pour votre recherche.</p>';
+            }
+        }
+
+        // Récupérer la requête de recherche depuis l'URL
+        const query = getQueryParameter('query');
+
+        // Vérifier s'il y a une requête valide
+        if (query) {
+            // Utiliser fetch pour récupérer le fichier JSON contenant les données
+            fetch('pageData.json')
+                .then(response => response.json())
+                .then(pagesData => {
+                    displayResults(pagesData, query);
+                })
+                .catch(error => {
+                    console.error('Erreur lors du chargement des données JSON :', error);
+                });
+        } else {
+            document.getElementById('results').innerHTML = '<p class="no-results">Aucune requête de recherche fournie.</p>';
+        }</script></body></html>
