@@ -12,7 +12,8 @@
           "display: -ms-inline-grid"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off"
   },
   "browserslist": [
     "defaults",

@@ -519,15 +519,24 @@ h1 span {
 }
 
 .services {
-    display:contents;
-    grid-template-columns: repeat(2, 5fr);
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px; 
+    max-width: 100%;
+    margin: 20px auto; 
 }
 
 .service {
-    background-color: #efefef;
+    width: 100%; /* Les services remplissent la colonne */
+    height: 300px; /* Hauteur fixe pour garantir une taille uniforme */
     padding: 20px;
-    border-radius: 20px;
+    background-color: #f9f9f9; /* Optionnel: couleur de fond pour chaque élément */
+    border: 1px solid #ccc; /* Optionnel: bordure pour chaque élément */
+    border-radius: 8px; /* Optionnel: coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
 }
 
 h2 {
@@ -684,6 +693,7 @@ p {
     }
 }
 
+
 .card1 {
     background-color: white;
     padding: 20px;
@@ -694,6 +704,11 @@ p {
 .content4 {
     padding: 20px;
     background-color:  #e9fbffe0;
+}
+
+.outil h2 {
+    color: #004085;
+    text-align: left;
 }
 
 .contents {
@@ -924,6 +939,7 @@ p {
 }
 
 .context-section h2 {
+    text-align: justify;
     font-size: 30px;
     color: #007bff;
     margin-bottom: 20px;
@@ -931,6 +947,7 @@ p {
 }
 
 .context-section h3 {
+    text-align: justify;
     font-size: 24px;
     color: #007bff;
     margin-top: 30px;
@@ -938,17 +955,17 @@ p {
 }
 
 .context-section p {
+    text-align: justify;
     font-size: 18px;
     line-height: 1.6;
     color: #333;
     margin-bottom: 20px;
-    text-align: justify;
 }
 
 .context-section .introduction {
+    text-align: justify;
     font-weight: bold;
     color: #000;
-    text-align: center;
 }
 
 .context-section ul {
@@ -963,12 +980,14 @@ p {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    text-align: justify;
 }
 
 .context-section ul li i {
     color: #27ae60;
     margin-right: 10px;
     font-size: 20px;
+    text-align: justify;
 }
 
 .context-section i {
